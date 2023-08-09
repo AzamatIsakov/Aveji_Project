@@ -1,0 +1,11 @@
+@mixin primary_btn($bg-color, $color) {
+  width: 126px;
+  height: 22px;
+  padding: 12px 20px;
+  background-color: $bg-color;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}

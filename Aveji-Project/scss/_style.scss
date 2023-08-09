@@ -1,0 +1,566 @@
+@include mobile {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .navbar {
+    margin-top: 8px;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-box {
+      display: none;
+    }
+    .burger {
+      margin-top: 14px;
+      transition: all 0.3s ease;
+      // position: absolute;
+      // z-index: 10;
+      right: 16px;
+      top: 22px;
+      width: 24px;
+      height: 12px;
+      background: url(/assets/images/burger.svg) no-repeat center 0 / contain;
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:active {
+        transform: scale(1);
+      }
+      &-menu {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+      }
+      &-close-btn {
+        transition: all 0.3s ease;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        z-index: 100;
+        right: 16px;
+        top: 22px;
+        background: url(/assets/images/close_btn.svg) no-repeat center 0 /
+          contain;
+        &:hover {
+          transform: scale(1.2);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+      &-list {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        &-item {
+          font: 400 normal 32px/1.4 "Roboto";
+        }
+      }
+    }
+  }
+  .header-page {
+    margin-top: 20px;
+    &-row {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-content {
+      display: flex;
+    }
+    &-title {
+      font: 400 normal 32px/1.2 "Helvetica";
+      text-transform: uppercase;
+    }
+    &-link {
+      margin-top: 24px;
+      a {
+        transition: all 0.3s ease;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        font: 400 normal 18px "Roboto";
+        &:hover {
+          color: #ddd7c0;
+        }
+        &:active {
+          color: #cbc6b2;
+        }
+      }
+    }
+    &-img {
+      margin-top: 24px;
+    }
+    &-text {
+      font: 400 normal 16px/1.4 "Roboto";
+    }
+  }
+  .title {
+    font: 400 normal 28px / normal "Helvetica";
+    // padding-right: 97px;
+  }
+  .about-us {
+    margin-top: 48px;
+
+    &-text {
+      margin-top: 20px;
+      font: 400 normal 16px/1.4 "Roboto";
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+    .stats {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      li {
+        width: 161px;
+      }
+      &-subtitle {
+        font: 400 normal 24px / normal "Helvetica";
+      }
+      &-text {
+        font: 400 normal 16px/1.4 "Roboto";
+      }
+    }
+  }
+  hr {
+    margin: 0;
+  }
+  .steps {
+    margin-top: 48px;
+    &-row {
+      display: flex;
+      flex-direction: column;
+    }
+    &-text {
+      width: 342px;
+      margin-top: 20px;
+      font: 400 normal 16px/1.4 "Roboto";
+    }
+    &-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px 0;
+      &-title {
+        font: 400 normal 24px / normal "Helvetica";
+      }
+      &-text {
+        margin-top: 20px;
+        font: 400 normal 16px/1.4 "Roboto";
+      }
+    }
+  }
+  .projects {
+    margin-top: 48px;
+    &-img-box {
+      width: 343px; //359px;
+      overflow-y: scroll;
+      margin-top: 20px;
+      flex-wrap: nowrap;
+      gap: 20px;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+    &-card {
+      position: relative;
+      // overflow: hidden;
+    }
+    &-text {
+      font: 400 normal 16px/1.4 "Roboto";
+      color: #fff;
+      &-box {
+        transition: all 0.3s ease;
+        position: absolute;
+        box-sizing: border-box;
+        display: block;
+        width: 252px;
+        padding: 11px 12px;
+        background: rgba(33, 37, 41, 0.5);
+        bottom: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .testimonials {
+    margin-top: 48px;
+    &-card {
+      box-sizing: border-box;
+      padding: 32px 32.5px 37px 32.5px;
+      border: 1px solid $black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-box {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+      }
+    }
+    &-author {
+      text-align: center;
+      margin-top: 32px;
+      font: 400 normal 18px / normal "Helvetica";
+    }
+    &-text {
+      text-align: center;
+      margin-top: 20px;
+      font: 400 normal 16px/1.4 "Roboto";
+    }
+  }
+  .form {
+    margin-top: 48px;
+    &-text {
+      margin-top: 20px;
+      font: 400 normal 16px/1.4 "Roboto";
+    }
+    .btn-box {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &-input {
+      padding: 0;
+      padding-bottom: 12px;
+      border: 0;
+      font: 400 normal 16px / normal "Roboto";
+      border-bottom: 1px solid #212529;
+      &:focus {
+        border-bottom: 1px solid #ddd7c0;
+      }
+      &::placeholder {
+        color: #212529;
+        font: inherit;
+      }
+    }
+    &-btn {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 20px;
+      padding: 12px 20px;
+      font: 400 normal 16px/1.4 "Roboto";
+      color: white;
+      border: 0;
+      background-color: #212529;
+      &:hover {
+        background-color: #ddd7c0;
+        color: #212529;
+      }
+      &:active {
+        background-color: #cbc6b2;
+      }
+    }
+    .stores-btn {
+      svg {
+        transition: all 0.3s ease;
+      }
+      &-box {
+        margin-top: 28px;
+        display: flex;
+        gap: 8px;
+      }
+      &:hover svg {
+        transition: all 0.3s ease;
+
+        background-color: grey;
+        box-shadow: 0 0 15px 0px grey;
+      }
+    }
+  }
+  .footer {
+    padding-bottom: 20px;
+    margin-top: 60px;
+    &-row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-info {
+      font: 400 normal 18px / normal "Roboto";
+      text-transform: uppercase;
+      text-align: center;
+      &:first-child {
+        margin-top: 28px;
+      }
+    }
+    &-text {
+      transition: all 0.3s ease;
+      text-align: center;
+      font: 400 normal 16px/1.4 "Roboto";
+      &:hover {
+        color: #ddd7c0;
+      }
+      &:active {
+        color: #cbc6b2;
+      }
+      &-box {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .social {
+          display: flex;
+          gap: 40px;
+          &-network {
+            transition: all 0.3s ease;
+            font: 400 normal 18px / normal "Roboto";
+            &:hover {
+              color: #ddd7c0;
+            }
+            &:active {
+              color: #cbc6b2;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+@include desktop {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .navbar {
+    margin-top: 12px;
+    &-row {
+      justify-content: start;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font: 400 normal 18px "Roboto";
+      color: $black;
+    }
+    &-list-item {
+      transition: all 0.3s ease;
+      &:hover {
+        color: #ddd7c0;
+      }
+      &:active {
+        color: #cbc6b2;
+      }
+    }
+    &-link {
+      transition: all 0.3s ease;
+      font: 400 normal 18px / normal "Roboto";
+      &-box {
+        display: flex;
+        justify-content: end;
+      }
+      &:hover {
+        color: #ddd7c0;
+      }
+      &:active {
+        color: #cbc6b2;
+      }
+    }
+  }
+  .header-page {
+    margin-top: 40px;
+    &-row {
+      margin-top: 40px;
+      flex-direction: row;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 232px;
+    }
+    &-title {
+      font: 400 normal 72px/1.2 "Helvetica";
+    }
+    &-link {
+      margin-top: 0;
+      text-align: end;
+      align-self: end;
+    }
+    &-img {
+      margin-top: 0px;
+    }
+    &-text {
+      padding-right: 240px;
+      font: 400 normal 20px/1.4 "Roboto";
+    }
+  }
+  .title {
+    font: 400 normal 48px / normal "Helvetica";
+    padding-right: 97px;
+  }
+  .about-us {
+    margin-top: 120px;
+
+    &-text {
+      margin-top: 29px;
+      padding-right: 230px;
+    }
+    .stats {
+      margin-top: 44px;
+      gap: 24px;
+      li {
+        width: 146px;
+      }
+      &-subtitle {
+        font: 400 normal 36px / normal "Helvetica";
+      }
+    }
+  }
+
+  .steps {
+    margin-top: 120px;
+    &-row {
+      display: flex;
+      flex-direction: row;
+    }
+    &-text {
+      width: 325px;
+      margin-top: 22px;
+    }
+    &-card {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 24px 0;
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+      &-title {
+        font: 400 normal 36px / normal "Helvetica";
+        width: 328px;
+      }
+      &-text {
+        margin-top: 12px;
+        width: 329px;
+      }
+    }
+  }
+  .projects {
+    margin-top: 120px;
+    &-img-box {
+      width: auto;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &-card {
+      overflow: hidden;
+      &:hover .projects-text-box {
+        bottom: 4px;
+      }
+    }
+    &-text {
+      &-box {
+        width: 445px;
+        padding: 22px 20px;
+        bottom: -66.4px;
+      }
+    }
+  }
+  .testimonials {
+    margin-top: 120px;
+    &-card {
+      padding: 40px 40px 60px 40px;
+      &-box {
+        flex-direction: row;
+        margin-top: 32px;
+      }
+    }
+  }
+  .form {
+    margin-top: 120px;
+    &-img {
+      display: block;
+    }
+    &-text {
+      margin-top: 32px;
+    }
+    .btn-box {
+      margin-top: 72px;
+    }
+    &-input {
+      width: 562px;
+    }
+    &-btn {
+      margin-top: 24px;
+    }
+    .stores-btn {
+      svg {
+        transition: all 0.3s ease;
+      }
+      &-box {
+        margin-top: 40px;
+      }
+    }
+  }
+  .footer {
+    padding-bottom: 16px;
+    margin-top: 120px;
+    &-row {
+      flex-direction: row;
+    }
+    &-info {
+      text-align: start;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &-text {
+      &-box {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: end;
+        align-items: end;
+        .social {
+          display: flex;
+          &-network {
+            transition: all 0.3s ease;
+            font: 400 normal 18px / normal "Roboto";
+            &:hover {
+              color: #ddd7c0;
+            }
+            &:active {
+              color: #cbc6b2;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        display: inline;
+      }
+      &:nth-child(3) {
+        margin-top: 0px;
+      }
+    }
+  }
+}
